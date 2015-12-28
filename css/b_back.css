@@ -1,0 +1,94 @@
+.b_background{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: url("images/background/b_background_light.png") 0 0 no-repeat;
+	background-size: 100% 100%;
+	z-index: 2;
+}
+.lamp_dark{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: url("images/background/b_background_dark.png") 0 0 no-repeat;
+	background-size: 100% 100%;
+	z-index: 3;
+}
+.lightlamp{
+	opacity: 0;
+}
+
+.shopdoor{
+	width: 13%;
+	height: 24%;
+	position: absolute;
+	left: 52%;
+	top: 48%;
+	z-index: 4;
+}
+
+.shopdoor .leftdoor{
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	left: 0%;
+	background: url("images/door-left.png") no-repeat;
+	background-size: 100% 100%;
+}
+.shopdoor .rightdoor{
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	right: 0%;
+	background: url("images/door-right.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+.bird{
+	min-width: 91px;
+	min-height: 71px;
+	position: absolute;
+	top: 5%;
+	right: -91px;
+	background: url("images/bird.png") 0 0 no-repeat;
+	z-index: 4;
+}
+
+.birdfly{
+	-webkit-animation-name: bird-fly;
+	-webkit-animation-duration: 600ms;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: steps(1,start);
+	-moz-animation-name: bird-fly;
+	-moz-animation-duration: 600ms;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: steps(1,start);
+}
+@-webkit-keyframes bird-fly{
+	0%{
+		background-position: 0px 0px;
+	}
+	33%{
+		background-position: -91px 0px;
+	}
+	66%{
+		background-position: -182px 0px;
+	}
+	99%{
+		background-position: 0px 0px;
+	}
+}
+@-moz-keyframes bird-fly{
+	0%{
+		background-position: 0px 0px;
+	}
+	33%{
+		background-position: -91px 0px;
+	}
+	66%{
+		background-position: -182px 0px;
+	}
+	99%{
+		background-position: 0px 0px;
+	}
+}

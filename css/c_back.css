@@ -1,0 +1,367 @@
+.c_background{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+}
+
+.c_background #c_top{
+	width: 100%;
+	height: 71.6%;
+	background-image: url("images/background/c_background_top.png");
+	background-size: 100% 100%;
+}
+
+.c_background #c_mid{
+	width: 100%;
+	height: 13.1%;
+	background-image: url("images/background/c_background_middle.png");
+	background-size: 100% 100%;
+}
+
+
+.c_background #c_bottom{
+	width: 100%;
+	height: 15.3%;
+	background-image: url("images/background/c_background_bottom.png");
+	background-size: 100% 100%;
+}
+
+/*
+星星动画
+*/
+.stars{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.stars > li{
+	width: 30px !important;
+	height: 31px !important;
+	position: absolute;
+	background: url("images/stars.png") no-repeat;
+	z-index: 5;
+	opacity: 0;
+
+	-webkit-animation-name : star-blink;
+	-webkit-animation-duration: 4s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	-moz-animation-name : star-blink;
+	-moz-animation-duration: 4s;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: ease-in-out;
+}
+
+.stars li:nth-child(1){
+	left: 30%;
+	top: 20%;
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+}
+.stars li:nth-child(2){
+	left: 20%;
+	top: 20%;
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+}
+.stars li:nth-child(3){
+	left: 63%;
+	top: 10%;
+	-webkit-animation-delay: 3s;
+	-moz-animation-delay: 3s;
+}
+.stars li:nth-child(4){
+	left: 75%;
+	top: 5%;
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+}
+.stars li:nth-child(5){
+	left: 80%;
+	top: 30%;
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+}
+.stars li:nth-child(6){
+	left: 73%;
+	top: 25%;
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+}
+.stars li:nth-child(7){
+	left: 28%;
+	top: 38%;
+	-webkit-animation-delay: 3s;
+	-moz-animation-delay: 3s;
+}
+
+@-webkit-keyframes star-blink{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+@-moz-keyframes star-blink{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+/*
+小女孩动画
+*/
+#girl{
+	width: 151px;
+	height: 291px;
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	background: url("images/girl.png") -755px 0px no-repeat;
+}
+
+.girlturn{
+	-webkit-animation-name : girl-turn-back;
+	-webkit-animation-duration: 1500ms;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: step-start;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-name : girl-turn-back;
+	-moz-animation-duration: 1500ms;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: step-start;
+	-moz-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes girl-turn-back{
+	0%{
+		background-position: -755px 0px;
+	}
+	10%{
+		background-position: -151px 0px;
+	}
+	40%{
+		background-position: -906px 0px;
+	}
+	55%{
+		background-position: 0px 0px;
+	}
+	70%{
+		background-position: -302px 0px;
+	}
+	85%{
+		background-position: -453px 0px;
+	}
+	100%{
+		background-position: -604px 0px;
+	}
+}
+
+@-moz-keyframes girl-turn-back{
+	0%{
+		background-position: -755px 0px;
+	}
+	10%{
+		background-position: -151px 0px;
+	}
+	40%{
+		background-position: -906px 0px;
+	}
+	55%{
+		background-position: 0px 0px;
+	}
+	70%{
+		background-position: -302px 0px;
+	}
+	85%{
+		background-position: -453px 0px;
+	}
+	100%{
+		background-position: -604px 0px;
+	}
+}
+
+
+
+/*文字效果*/
+
+.logo {
+    width: 185px;
+    height: 81px;
+    position: absolute;
+    left: 50%;
+    margin-left: -92.5px;
+    top: 30px;
+    display: none;
+    background-image: url("images/logo.png");
+    background-size: 260% 100%;
+    z-index: 999999;
+}
+
+.logolightSpeedIn {
+    display: block;
+    -webkit-animation-name: lightSpeedIn;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-duration: 1s;
+    -moz-animation-name: lightSpeedIn;
+    -moz-animation-timing-function: ease-out;
+    -moz-animation-duration: 1s;
+}
+
+@-webkit-keyframes lightSpeedIn {
+    0% {
+        -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+        opacity: 0;
+    }
+    60% {
+        -webkit-transform: skewX(20deg);
+        opacity: 1;
+    }
+    80% {
+        -webkit-transform: skewX(-5deg);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: none;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes lightSpeedIn {
+    0% {
+        -moz-transform: translate3d(100%, 0, 0) skewX(-30deg);
+        opacity: 0;
+    }
+    60% {
+        -moz-transform: skewX(20deg);
+        opacity: 1;
+    }
+    80% {
+        -moz-transform: skewX(-5deg);
+        opacity: 1;
+    }
+    100% {
+        -moz-transform: none;
+        opacity: 1;
+    }
+}
+
+.logoshake {
+    -webkit-animation-name: logoshake;
+    -webkit-animation-duration: 0.5s;
+    -moz-animation-name: logoshake;
+    -moz-animation-duration: 0.5s;
+}
+
+@-webkit-keyframes logoshake {
+    /* 补充代码使logo产生左右晃动效果 */ 
+     0%, 100% {
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+    15%,
+    45%,
+    75% {
+        -webkit-transform: translate3d(-5px, 0, 0);
+    }
+    30%,
+    60%,
+    90% {
+        -webkit-transform: translate3d(5px, 0, 0);
+    }
+}
+
+@-moz-keyframes logoshake {
+    /* 补充代码使logo产生左右晃动效果 */ 
+    0%, 100% {
+        -moz-transform: translate3d(0, 0, 0);
+    }
+    15%,
+    45%,
+    75% {
+        -moz-transform: translate3d(-5px, 0, 0);
+    }
+    30%,
+    60%,
+    90% {
+        -moz-transform: translate3d(5px, 0, 0);
+    }
+}
+
+
+/*
+	花瓣空中旋转动画
+*/
+.flowerRotate{
+	position: absolute;
+	z-index: 10000;
+	width: 41px;
+	height: 40px;
+	top: -40px;
+	/*background: url("images/snowflake/snowflake1.png");*/
+}
+.snowflake1{
+	background: url("images/snowflake/snowflake1.png");
+}
+.snowflake2{
+	background: url("images/snowflake/snowflake2.png");
+}
+.snowflake3{
+	background: url("images/snowflake/snowflake3.png");
+}
+.snowflake4{
+	background: url("images/snowflake/snowflake4.png");
+}
+.snowflake5{
+	background: url("images/snowflake/snowflake5.png");
+}
+.snowflake6{
+	background: url("images/snowflake/snowflake6.png");
+}
+
+.f-rotate{
+	-webkit-animation-name: flower-rotate;
+	-webkit-animation-duration: 25s;
+	-webkit-animation-iteration-count: 2;
+	-webkit-animation-timing-function: ease;
+	-moz-animation-name: flower-rotate;
+	-moz-animation-duration: 25s;
+	-moz-animation-iteration-count: 2;
+	-moz-animation-timing-function: ease;
+}
+@-webkit-keyframes flower-rotate{
+	0%{
+		
+	}
+	50%{
+		-webkit-transform: rotate(720deg);
+	}
+	100%{
+		-webkit-transform: rotate(640deg);
+	}
+}
+
+@-moz--keyframes flower-rotate{
+	0%{
+		
+	}
+	50%{
+		-moz--transform: rotate(1080deg);
+	}
+	100%{
+		-moz--transform: rotate(0deg) 
+			translate3d(50px,50px,50px);
+	}
+}

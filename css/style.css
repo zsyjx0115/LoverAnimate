@@ -1,0 +1,223 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	width:100%;
+	height:100%;
+	margin: 0 auto;
+}
+.main-content{
+	width: 100%;
+	height: 100%;
+	overflow:hidden;
+	position:absolute;
+} 
+ul,li{
+	list-style-type: none;
+}
+.content{
+	height: 100%;
+	overflow: hidden;
+	position:relative;
+}
+
+ul.content > li{
+	width: 100%;
+	height: 100%;
+	position:relative;
+	float:left;
+}
+
+/*li:nth-child(1){
+	background-color:red;
+}
+li:nth-child(2){
+	background-color:yellow;
+}
+li:nth-child(3){
+	background-color:blue;
+	}*/
+
+	#boy{
+		width: 151px;
+		height: 291px;
+		background-image: url("images/boy.png");
+		background-position: 0px -291px;
+		position: absolute;
+		left:5%;
+		top:36%;
+		z-index: 9999;
+	}
+/*
+小男孩走路动画
+*/
+.walk{
+	-webkit-animation-name: boy-walk;
+	-webkit-animation-duration: 1200ms;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: steps(1,start);
+	-moz-animation-name: boy-walk;
+	-moz-animation-duration: 1200ms;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: steps(1,start);
+}
+
+.pausewalk{
+	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
+}
+
+@-webkit-keyframes boy-walk{
+	0% {
+		background-position: -0px -291px;
+	}
+	25% {
+		background-position: -602px -0px;
+	}
+	50% {
+		background-position: -302px -291px;
+	}
+	75% {
+		background-position: -151px -291px;
+	}
+	100% {
+		background-position: -0px -291px;
+	}
+}
+
+@-moz-keyframes boy-walk{
+	0% {
+		background-position: -0px -291px;
+	}
+	25% {
+		background-position: -602px -0px;
+	}
+	50% {
+		background-position: -302px -291px;
+	}
+	75% {
+		background-position: -151px -291px;
+	}
+	100% {
+		background-position: -0px -291px;
+	}
+}
+/*
+小男孩拿花走路
+*/
+.walkWithFlower{
+	-webkit-animation-name: boy-flower-walk;
+	-webkit-animation-duration: 1200ms;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: steps(1,start);
+	-moz-animation-name: boy-flower-walk;
+	-moz-animation-duration: 1200ms;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: steps(1,start);
+}
+
+@-webkit-keyframes boy-flower-walk{
+	0% {
+		background-position: -453px -0px;
+	}
+	25% {
+		background-position: -904px -0px;
+	}
+	50% {
+		background-position: -451px -0px;
+	}
+	75% {
+		background-position: -753px -0px;
+	}
+	100% {
+		background-position: -300px -0px;
+	}
+}
+
+@-moz-keyframes boy-flower-walk{
+	0% {
+		background-position: -453px -0px;
+	}
+	25% {
+		background-position: -904px -0px;
+	}
+	50% {
+		background-position: -451px -0px;
+	}
+	75% {
+		background-position: -753px -0px;
+	}
+	100% {
+		background-position: -300px -0px;
+	}
+}
+
+
+.boyturn{
+	-webkit-animation-name: boy-turn-back;
+	-webkit-animation-duration: 1500ms;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: step-start;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-name: boy-turn-back;
+	-moz-animation-duration: 1500ms;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: step-start;
+	-moz-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes boy-turn-back{
+	0%{
+		background-position: -151px 0px;
+	}
+	10%{
+		background-position: -453px -291px;
+	}
+	55% {
+		background-position: 0px 0px;
+	}
+	70% {
+		background-position: -906px -291px;
+	}
+	85% {
+		background-position: -755px -291px;
+	}
+	100% {
+		background-position: -604px -291px;
+	}
+}
+@-moz-keyframes boy-turn-back{
+	0%{
+		background-position: -151px 0px;
+	}
+	10%{
+		background-position: -453px -291px;
+	}
+	55% {
+		background-position: 0px 0px;
+	}
+	70% {
+		background-position: -906px -291px;
+	}
+	85% {
+		background-position: -755px -291px;
+	}
+	100% {
+		background-position: -604px -291px;
+	}
+}
+
+
+
+
+.button{
+	position: absolute;
+	bottom: 0;   
+	z-index: 3; 
+}
+.button button{
+	width: 100px;
+	height: 50px;
+}
